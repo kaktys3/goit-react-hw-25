@@ -1,0 +1,30 @@
+.mainInfo {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.text {
+    width: 900px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.additionalSection {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.backButton {
+    color: #000;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.detailsContainer {
+    padding: 10px 0px 0px;
+}

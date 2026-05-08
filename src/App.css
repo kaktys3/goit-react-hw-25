@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  gap: 30px;
+  padding: 20px 80px;
+box-shadow: 0px 7px 5px rgb(203, 203, 203);
+
+  a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+
+body,input,h1,h2,h3,h4,h5,h6,a,span {
+  margin: 0px;
+}

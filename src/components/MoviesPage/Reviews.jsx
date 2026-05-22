@@ -2,7 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
-export function Reviews() {
+export default function Reviews() {
     const [reviewsInfo, setReviewsInfo] = useState()
     const { id } = useParams()
 

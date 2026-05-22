@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom'
 import home from './HomePage.module.css'
 import axios from 'axios'
 
-export default function HomePage () {
+const HomePage = () => {
     const [filmData, setFilmData] = useState([])
 
     useEffect(() => {
         const data = async () => {
             const info =  await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=cf1c71e62767c76c5de36610e4908325&language=en-US`)
+            console.log(info)
             setFilmData([info])
         }
 
@@ -28,3 +29,5 @@ export default function HomePage () {
         </>
     )
 } 
+
+export default HomePage

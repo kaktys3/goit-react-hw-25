@@ -2,7 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
-export function Cast() {
+export default function Cast() {
     const [actors, setActors] = useState()
     const { id } = useParams()
 

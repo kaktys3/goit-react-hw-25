@@ -36,7 +36,7 @@ export default function MoviesSerch() {
         setSearchParams({ query: formSearch })
     }
 
-    console.log(filmInfo)
+    console.log(serchParams.get("query"))
 
     return (
         <>
@@ -47,7 +47,7 @@ export default function MoviesSerch() {
 
             {filmInfo && filmInfo.map((e) => (
                 <ul>
-                    <li key={e.id}><Link key={e.id} to={`/movies/${e.id}`}>{e.title}</Link></li>
+                    <li key={e.id}><Link key={e.id} state={{from: `/movies?query=${serchParams.get("query")}`}} to={`/movies/${e.id}`}>{e.title}</Link></li>
                 </ul>
             ))}
         </>

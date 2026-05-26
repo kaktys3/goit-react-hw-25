@@ -22,7 +22,7 @@ const HomePage = () => {
             <h1>Treding today</h1>
             {filmData.length && filmData[0].data.results.map((e) => (
                 <ul>
-                    <li key={e.id}><Link key={e.id} href={e.backdrop_path} to={`/movies/${e.id}`}>{e.title}</Link></li>
+                    <li key={e.id}><Link key={e.id} href={e.backdrop_path} to={`/movies/${e.id}`} state={{from: '/'}}>{e.title}</Link></li>
                 </ul>
             ))}
         </section>

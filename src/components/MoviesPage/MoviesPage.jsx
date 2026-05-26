@@ -1,4 +1,4 @@
-import { Link, Outlet, useParams } from "react-router-dom"
+import { Link, Outlet, useParams, useLocation } from "react-router-dom"
 import { IoStarSharp } from "react-icons/io5";
 import movie from './MoviesPage.module.css'
 import { useEffect, useState } from "react"
@@ -7,6 +7,7 @@ import axios from "axios"
 export default function MoviesPage() {
     const [infoData, setData] = useState(null)
     const { id } = useParams()
+    const location = useLocation()
 
     useEffect(() => {
         const deatailInfo = async () => {
@@ -26,7 +27,7 @@ export default function MoviesPage() {
         <>
             {infoData && (
                 <section className={movie.detailsContainer}>
-                    <Link to='/' className={movie.backButton}>Go back</Link>
+                    <Link to={location.state.from} className={movie.backButton}>Go back</Link>
                     <div className={movie.mainInfo}>
                         <div className={movie.posterWrapper}>
                             <img
